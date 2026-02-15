@@ -1,0 +1,264 @@
+/*GLOBAL  */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /*  NAVBAR  */
+  .navbar {
+    background-color: #222;
+    color: white;
+  }
+  
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    border: none;
+    background: white;
+    color: #222;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;              /* hidden by default on mobile */
+    flex-direction: column;
+    background-color: #222;
+  }
+  
+  .nav-links.open {
+    display: flex;              /* shown when JS toggles .open */
+  }
+  
+  .nav-links li {
+    padding: 10px 20px;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /*  HERO  */
+  .hero {
+    padding: 60px 20px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;     /* mobile layout */
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+  }
+  
+  .hero p {
+    margin: 0 0 15px;
+    color: #555;
+  }
+  
+  /*  Explore is an <a>, so styled it like a button */
+  .hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .hero-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .hero img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /*  PRODUCTS */
+  .products {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .product-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;  /* 1 col mobile */
+    gap: 20px;
+  }
+  
+  /* class="card" */
+  .card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .card h3 {
+    margin: 12px 0 6px;
+  }
+  
+  .card p {
+    margin: 0 0 12px;
+    color: #555;
+  }
+  
+  .card button {
+    padding: 10px 14px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .card button:hover {
+    opacity: 0.9;
+  }
+  
+  /*  RESPONSIVE */
+  @media (min-width: 768px) {
+    /* Navbar desktop */
+    .hamburger {
+      display: none;
+    }
+  
+    .nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        background: none;
+        justify-content: flex-end;   /*  important */
+      }
+    
+      .navbar {
+        display: flex;
+        justify-content: space-between;  /* keeps logo left, links right */
+        align-items: center;
+      }
+  
+    /* Hero desktop */
+    @media (min-width: 768px) {
+      .hero {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        text-align: left;
+      }
+    
+      .hero-content {
+        flex: 1;
+      }
+    
+      .hero img {
+        flex: 1;
+        max-width: 420px;
+      }
+    }
+    
+    /* Products tablet */
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* Products desktop */
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* About section */
+.about {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    color: #555;
+  }
+  /*Contact section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    margin: 8px 0;
+    color: #555;
+  }
+    
